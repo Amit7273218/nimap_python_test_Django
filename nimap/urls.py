@@ -6,7 +6,7 @@ class CustomLoginView(auth_views.LoginView):
     def get_success_url(self):
         return '/clients/'
     
-    
+
 urlpatterns = [
     path('clients/', CreateClients.as_view(), name='create-clients'),
     path('clients/<int:pk>/', UpdateDelClients.as_view(), name='update-delete-clients'),
@@ -16,5 +16,4 @@ urlpatterns = [
     path('users/<int:pk>/', UpdateDelUser.as_view(), name='update-delete-users'),
     path('', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('register/', register, name='register'),
-    #path('register/', RegistrationView.as_view(), name='register'),    # Login path
 ]

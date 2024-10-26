@@ -1,5 +1,5 @@
 from django import forms
-from .models import User  # Import your custom User model
+from .models import User  
 
 class UserRegistrationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
