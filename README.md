@@ -54,7 +54,36 @@ python manage.py runserver
 **8. Access the Admin Panel**
 Go to http://127.0.0.1:8000/admin to access the Django admin panel and manage User entities.
 
-#postman#
+**postman:-**
+
 **Each feature can be tested by sending HTTP requests from Postman:**
 
+**1) Registering a Client:-**
+
+Method: POST
+URL: http://localhost:5000/clients
+Body: JSON payload with client data
+
+**2)Fetching Client Information:-**
+
+Method: GET
+URL (all clients): http://localhost:5000/clients
+URL (specific client): http://localhost:5000/clients/{client_id}
+
+**3)Editing/Deleting Client Information:-**
+
+Method: PUT for editing, DELETE for deletion
+URL: http://localhost:5000/clients/{client_id}
+Body (for edit): JSON payload with updated client data
+
+**4)Adding New Projects for a Client:-**
+
+Method: POST
+URL: http://localhost:5000/clients/{client_id}/projects
+Body: JSON payload with project data and assigned users
+
+**5)Retrieving Assigned Projects for Logged-in Users:-**
+
+Method: GET
+URL: http://localhost:5000/users/{user_id}/projects
 
